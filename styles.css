@@ -296,14 +296,42 @@ nav{
     color: white;
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom: -40px; 
     padding-left: 25px;
     box-sizing: border-box;
+  }
+  .project-info{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -150px;
+    transition: all 0.2s;
+    z-index: 5;
+
+  }
+  .project-stack{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+  .project-short-desc{
+    height: 70px;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: small;
+    line-height: 1.1rem;
+  }
+  .project-info:hover{
+    bottom: 0px !important;
     transition: all 0.2s;
   }
-  .project-body:hover .project-title{
-    bottom: 0px;
+  .project-body:hover .project-info{
+    bottom: -110px;
     transition: all 0.2s;
   }
   .project-body:hover{
