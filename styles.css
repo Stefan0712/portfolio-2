@@ -24,6 +24,7 @@ nav{
     display: flex;
     flex-direction: column;
     position: fixed;
+    align-items: center;
     top: 0px;
     right: 0px;
     font-family: 'Press Start 2P', cursive;
@@ -48,9 +49,12 @@ nav{
     font-weight: bold;
     animation-name: navAppear;
     animation-duration: 0.5s;
+    transition: all 0.3s;
 }
 .nav-links a:hover{
     color: red;
+    transform: scale(1.1) translateX(-5px);
+    transition: all 0.3s;
 }
 @keyframes navAppear {
     0%{
@@ -72,16 +76,21 @@ nav{
     align-items: center;
     gap: 15px;
 }
-.nav-socials img{
-    width: 50%;
+.nav-socials i{
     border: 1px solid transparent;
     border-radius: 10px;
-     
+    font-size: 50px;
+    margin-bottom: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
 
 }
-.nav-socials img:hover{
-    border: 1px solid black;
+.nav-socials i:hover{
     transition: border 0.1;
+    color: red;
+    text-shadow: 1px 1px 0px white, 4px 4px 0px black;
+    transform: translateY(-5px);
+    transition: all 0.3s;
 }
 .home-text{
     margin-left: 100px;
@@ -339,4 +348,266 @@ nav{
     z-index: 1000;
     box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
   }
+
+
+
+
+  /*easter egg mini game */
   
+  #start-game-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  #start-game-btn:hover{
+    transform: scale(1.1) translateY(-5px);
+    color: red;
+    transition: all 0.3s;
+    text-shadow: 4px 4px 0px white, 6px 6px 0px black;
+  }
+  .game-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f57a;
+    z-index: 1000;
+  }
+  .game-start-screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    z-index: 1001;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .game-start-screen img{
+    width: 30%;
+  }
+  #beggin-game-btn{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+    transition: all 0.3s;
+  }
+  #beggin-game-btn:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
+    }
+    .hide{
+        display: none;
+    }
+    .contract{
+        height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+  
+  .game-body{
+    width: 50%;
+    height: 75%;
+    border: 3px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f5f5f5;
+    position: relative;
+    line-height: 1.5;
+    animation: expandGame 0.5s;
+    overflow: hidden;
+  }
+  @keyframes expandGame {
+    0%{
+        height: 6px;
+    }
+    10%{
+        height: 6px;
+    }
+    100%{
+        height: 75%;
+    }
+  }
+  #close-game-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  #close-game-btn:hover{
+    color: red;
+  }
+  #question-box{
+    width: 80%;
+    height: 35%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    
+  }
+  .choices{
+    height: 35%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .choice{
+    width: 45%;
+    height: 40%;
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  .choice:hover{
+    color: white;
+    background-color: black;
+  }
+  #fact-box{
+    height: 25%;
+    width: 80%;
+    border: 3px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    color: transparent;
+  }
+  #fact-box:hover{
+    color: black;
+  }
+
+  .right-answer{
+    animation: greenPulse 0.5s;
+  }
+  @keyframes greenPulse {
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: green;
+        border: 3px solid white;
+        color: white;
+    }
+    50%{
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+   }
+    
+    75%{
+        background-color: green;
+        border: 3px solid white;
+        color: white;
+    }
+
+  }
+  .wrong-answer{
+    animation: redPulse 0.5s;
+  }
+  @keyframes redPulse {
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: red;
+        border: 3px solid white;
+        color: white;
+    }
+    50%{
+        background-color: black;
+        border: 3px solid black;
+        color: white;
+   }
+    
+    75%{
+        background-color: red;
+        border: 3px solid white;
+        color: white;
+    }
+  }
+  #right-answers{
+    color: green;
+  }
+  #wrong-answers{
+    color: red;
+  }
+  .score{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .game-score{
+    height: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    
+  }
+  .show-game{
+    display: flex;
+  }
+
+  .game-end-screen{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: center;
+  }
+  .show-end{
+    display: flex;
+    animation: expandGame 0.3s;
+  }

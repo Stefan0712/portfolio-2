@@ -19,10 +19,11 @@
             <a href="#contact" class="nav-link">Contact</a>
         </div>
         <div class="nav-socials">
-            <img src="./images//facebook.svg" alt="Facebook logo">
-            <img src="./images/linkedin.svg" alt="Linkedin logo">
-            <img src="./images/instagram.svg" alt="Instgram logo">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-facebook"></i>
         </div>
+        <button id="start-game-btn" onclick="startGame()"><i class="fa-solid fa-play"></i></button>
         
     </nav>
     <section id="home">
@@ -32,6 +33,7 @@
             <h1 class="press-start title">JUNIOR WEB DEVELOPER</h1>
             <a href="#about" class="press-start" id="home-learn-more-btn">Learn more</a>
         </div>
+        
 
 
     </section>
@@ -158,6 +160,34 @@
             </div>
         </div>
     </section>
+    <div class="game-container" id="game">
+        
+        <div class="game-body">
+            <div id="start" class="game-start-screen">
+                <div class="start-title">A Quiz About Torii Gates</div>
+                <img src="./images/torii-gate.jpg" alt="Torii Gate">
+                <p class="attribution">Image by <a href="https://www.freepik.com/free-vector/flat-torii-gate-collection_9664872.htm#query=pixelated%20torii%20gate&position=4&from_view=search&track=ais">Freepik</a></p>
+                <button class="fa-solid fa-play" id="beggin-game-btn" onclick="begginGame()">Start</button>
+            </div>
+            <div id="end" class="game-end-screen">
+                <div id="result-message"></div>
+                <div id="result-score"></div>
+            </div>
+            <div id="close-game-btn" onclick="closeGame()">x</div>
+            <div class="game-score">
+                <div id="right-answers" class="score">0</div>
+                <div id="wrong-answers" class="score">0</div>
+            </div>
+            <div id="question-box">This is a question</div>
+            <div class="choices">
+                <div id="choice-1" class="choice">test1</div>
+                <div id="choice-2" class="choice">test2</div>
+                <div id="choice-3" class="choice">test3</div>
+                <div id="choice-4" class="choice">test4</div>
+            </div>
+            <div id="fact-box">This is a fact!</div>
+        </div>
+    </div>
     <script async defer src="https://formfacade.com/include/101384907356055585276/form/1FAIpQLSeWk7vTwtLXx3q9T_xztvt7zcwHWQ7q1nJhZqMcrVyHAwIGJw/clean.js?div=ff-compose"></script>
     <script src="https://kit.fontawesome.com/4a0e0cfa64.js" crossorigin="anonymous"></script>
 </body>
