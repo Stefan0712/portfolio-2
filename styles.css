@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0px !important;
+    font-family: 'Press Start 2P', cursive;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    
+}
+nav{
+    height: 100vh;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    font-family: 'Press Start 2P', cursive;
+    z-index: 1000;
+}
+.nav-links{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    margin-top: 25px;
+}
+.nav-links a{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    animation-name: navAppear;
+    animation-duration: 0.5s;
+}
+.nav-links a:hover{
+    color: red;
+}
+@keyframes navAppear {
+    0%{
+        opacity: 0;
+        transform: translatey(-50px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+.nav-socials{
+    margin-top: auto;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.nav-socials img{
+    width: 50%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+     
+
+}
+.nav-socials img:hover{
+    border: 1px solid black;
+    transition: border 0.1;
+}
+.home-text{
+    margin-left: 100px;
+    width: 75%;
+    z-index: 10;
+}
+.home-text img{
+    width: 90%;
+}
+#home{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+#home-blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f59f;
+    filter: blur(5px);
+    z-index: 5;
+}
+
+.title{
+    font-size: 3rem;
+    margin-top: 5px;
+    margin-bottom: 75px;
+}
+#home-learn-more-btn{
+    margin-top: 50px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: all 0.3s;
+    width: 175px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-learn-more-btn:hover{
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+    z-index: 1000;
+    box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
+  }
+.nav-link{
+    color: black;
+}
+.active {
+   color: #ff0000 !important;  
+  }
+
+
+  #about{
+    background-color: #fefbf3;
+  }
+  .section-header{
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    border-top:3px solid black;
+  }
+  .section-header h1{
+    color: white;
+    background-color: black;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 2rem;
+  }
+  #ff-compose{
+    font-family: 'Press Start 2P', cursive;
+  }
+  #ff-compose img{
+    display: none;
+    
+
+  }
+  .ff-submit{
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid black;
+    font-family: 'press start 2p', cursive;
+    font-size: 2rem;
+    
+  }
+  .ff-item{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .ff-widget-control{
+    height: 50px;
+    width: 90%;
+    border: 2px solid black;
+    padding-left: 15px;
+  }
+  
+
+  /* contact section */
+
+  .contact-content{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  .contact-info,
+  .contact-form{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form{
+    width: 40%;
+  }
+  .contact-form div{
+    width: 100%;
+  }
+  .contact-info{
+    width: 40%;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .contact-button{
+    width: 50%;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 2px #000000;
+  }
+  .contact-button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
+  }
+
+
+
+  /*projects section */
+  #projects{
+    align-items: center;
+    min-height: 100vh;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  .projects-container{
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 50px;
+  }
+  .projects-category-header{
+    width: 80%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
+  .projects-category{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-body{
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1.5 / 1;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 2px #000000;
+    margin: 25px 0px;
+  }
+  .project-image{
+    width: 100%;
+  }
+  .project-title{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -40px; 
+    padding-left: 25px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+  }
+  .project-body:hover .project-title{
+    bottom: 0px;
+    transition: all 0.2s;
+  }
+  .project-body:hover{
+    transform: scale(1.1);
+    z-index: 1000;
+    box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
+  }
+  
