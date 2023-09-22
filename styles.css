@@ -120,7 +120,19 @@ nav{
     filter: blur(5px);
     z-index: 5;
 }
-
+.home-name{
+    display: flex;
+    gap: 0px;
+    font-size: 2.5rem;
+    height: 150px;
+    align-items: center;
+}
+.square-cursor{
+    height: 50%;
+    width: 30px;
+    background-color: black;
+    
+}
 .title{
     font-size: 3rem;
     margin-top: 5px;
@@ -708,3 +720,119 @@ nav{
     text-decoration: underline;
     transition: all 0.3s;
 }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    nav{
+        display: none;
+    }
+    .section{
+        height: auto;
+        flex-direction: column;
+    }
+    .home-text{
+        width: 95%;
+    }
+    .section-header h1{
+        width: 100%;
+    }
+    #about{
+        height: auto;
+        
+    }
+    .about-container{
+        flex-direction: column;
+        gap: 25px;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 25px 0px;
+    }
+    .about-profile{
+        width: 90%;
+        height: auto;
+    }
+    .about-content{
+        width: 90%;
+        height: auto;
+    }
+    #projects{
+        height: auto;
+        flex-direction: column;
+    }
+    .projects-container{
+        width: 90%;
+        height: auto;
+    }
+    .projects-category-header{
+        width: 95%;
+        line-height: 1.3;
+        height: auto;
+    }
+    .projects-category{
+        height: auto;
+        flex-direction: column;
+    }
+    .project-body{
+        width: 90%;
+    }
+    .project-info{
+        bottom: -110px;
+    }
+    .contact-content{
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+        width: 100%;
+    }
+    #contact{
+        height: auto;
+    }
+    .contact-info,
+    .contact-form{
+        width: 100%;
+    }
+    .contact-button{
+        width: 90%;
+    }
+    .contact-info{
+        margin-bottom: 50px;
+    }
+    .home-text{
+        width: 90%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .home-name{
+        width: 100%;
+        font-size: 2rem;
+    }
+    .title{
+        font-size: 1.8rem;
+    }
+    .square-cursor{
+        display: none;
+    }
+    #home{
+        align-items: center;
+        line-height: 1.5;
+    }
+    #home-learn-more-btn{
+        align-self: center;
+        width: 75%;
+        height: 75px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .ff-partial{
+        box-sizing: border-box;
+        margin-top: 10px !important;
+    }
+    .ff-submit{
+        width: 100%;
+    }
+
+  }
