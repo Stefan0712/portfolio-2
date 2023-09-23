@@ -25,7 +25,12 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
+const toggleNavMenu = () =>{
+    const menuBtn = document.getElementById('menu-btn-icon')
+    menuBtn.classList.toggle('fa-close');
+    menuBtn.classList.toggle('fa-ellipsis-vertical');
+    document.getElementById('nav-container').classList.toggle('show-nav')
+}
 
 //game logic
 const gameQuestions = [
