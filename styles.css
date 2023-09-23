@@ -366,7 +366,7 @@ nav{
   }
   .project-body:hover{
     transform: scale(1.1);
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 3px 3px 0px 2px white, 7px 7px 0px 2px black;
   }
 
@@ -396,7 +396,8 @@ nav{
   .game-container{
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    
     top: 0px;
     left: 0px;
     display: none;
@@ -486,6 +487,7 @@ nav{
     top: 20px;
     font-size: 2rem;
     cursor: pointer;
+    z-index: 1000;
   }
   #close-game-btn:hover{
     color: red;
@@ -523,6 +525,22 @@ nav{
   .choice:hover{
     color: white;
     background-color: black;
+  }
+  .fact-header{
+    width: 95%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .fact-header p{
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #fact-box{
     height: 25%;
@@ -743,7 +761,7 @@ nav{
     }
     nav{
       width: 100vw;
-      position: absolute;
+      position: fixed;
       z-index: 1000;
       top: 0px;
       height: 55px;
@@ -896,6 +914,19 @@ nav{
     }
     .ff-submit{
         width: 100%;
+    }
+    .game-body{
+      width: 95%;
+    }
+    #question-box,
+    .choices,
+    #fact-box{
+      width: 95%;
+      font-size: 1rem;
+    }
+    .choice,
+    #fact-box{
+      font-size: 0.7rem;
     }
 
   }
