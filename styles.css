@@ -3,6 +3,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 0px !important;
     font-family: 'Press Start 2P', cursive;
+    user-select: none;
 }
 ::-webkit-scrollbar {
   width: 20px; 
@@ -899,7 +900,7 @@ nav{
         width: 100%;
     }
     .contact-button{
-        width: 90%;
+        width: 80%;
     }
     .contact-info{
         margin-bottom: 50px;
@@ -951,6 +952,9 @@ nav{
     .choice,
     #fact-box{
       font-size: 0.7rem;
+    }
+    .start-title{
+      text-align: center;
     }
 
   }
