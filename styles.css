@@ -775,6 +775,7 @@ nav{
     gap: 15px;
     align-items: center;
     background-color: white;
+    overflow-y: auto;
   }
   .profile-picture{
     background-color: rebeccapurple;
@@ -792,12 +793,17 @@ nav{
 .skills-container{
     display: flex;
     gap: 10px;
-    width: 80%;
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
 }
 .skill{
     height: 50px;
     width: 50px;
-    background-color: gray;
+}
+.skill-img{
+  width: 100%;
+  height: 100%;
 }
 .lang-squares-container{
     height: 50px;
