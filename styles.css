@@ -189,9 +189,21 @@ nav{
    color: #ff0000 !important;  
   }
 
-
+  #about-blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
   #about{
     background-color: #fefbf3;
+    /* background-image: url('./images/bg1.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
   }
   .section-header{
     height: 100px;
@@ -199,6 +211,7 @@ nav{
     display: flex;
     align-items: center;
     border-top:3px solid black;
+    z-index: 5;
   }
   .section-header h1{
     color: white;
@@ -259,7 +272,7 @@ nav{
 
   /* contact section */
   #contact{
-    background-image: url('./images/projects-bg.jpg');
+    /* background-image: url('./images/projects-bg.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -328,24 +341,36 @@ nav{
 .press-start{
   z-index: 5;
 }
+  #projects-blur{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
   /*projects section */
   #projects{
     align-items: center;
     min-height: 100vh;
     height: auto;
-    margin-bottom: 50px;
     background-color: #fefbf3;
     z-index: 0;
+    /* background-image: url('./images/bg2.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
   }
   .projects-container{
     width: calc(100% - 300px);
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    margin-top: 50px;
-    z-index: 2
+    margin-top: 25px;
+    z-index: 2;
   }
   .projects-category-header{
     width: 80%;
@@ -364,7 +389,7 @@ nav{
     justify-content: space-between;
   }
   .project-body{
-    width: 30%;
+    width: 25%;
     height: auto;
     aspect-ratio: 1.5 / 1;
     border: 3px solid black;
@@ -372,7 +397,7 @@ nav{
     overflow: hidden;
     transition: all 0.2s;
     box-shadow: 5px 5px 0px 2px #000000;
-    margin: 25px 0px;
+    margin: 10px 0px;
   }
   .project-image{
     width: 100%;
@@ -396,6 +421,8 @@ nav{
     bottom: -150px;
     transition: all 0.2s;
     z-index: 5;
+    overflow-y: auto;
+    background-color: white;
 
   }
   .project-stack{
@@ -726,6 +753,7 @@ nav{
     justify-content: center;
     gap: 25px;
     line-height: 1.5;
+    z-index: 5;
   }
   .about-content{
     width: 40%;
@@ -734,6 +762,7 @@ nav{
     padding: 25px;
     box-shadow: 12px 12px 0px 4px #000000;
     overflow-y: auto;
+    background-color: white;
   }
   .about-profile{
     width: 25%;
@@ -745,6 +774,7 @@ nav{
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    background-color: white;
   }
   .profile-picture{
     background-color: rebeccapurple;
