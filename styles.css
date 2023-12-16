@@ -1013,6 +1013,11 @@ nav{
     .ff-submit{
         width: 100%;
     }
+    #Widget182995808{
+      width: 100% !important;
+      height: 150px;
+      box-sizing: border-box;
+    }
     .game-body{
       width: 95%;
     }
