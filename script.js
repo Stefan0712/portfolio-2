@@ -77,8 +77,8 @@ const gameQuestions = [
     },
     {
         question: "What is the significance of the shimenawa, a sacred rope often seen hanging from torii gates?",
-        choices: ["It's a decorative element", "It marks a boundary between the sacred and profane", "It symbolizes the wind", "It represents the sky"],
-        correctChoice: "It marks a boundary between the sacred and profane",
+        choices: ["It's a decorative element", "A boundary between sacred and profane", "It symbolizes the wind", "It represents the sky"],
+        correctChoice: "A boundary between sacred and profane",
         fact: "The shimenawa signifies the transition from the ordinary to the sacred."
     },
     {

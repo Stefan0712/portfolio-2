@@ -1,9 +1,9 @@
 *{
-    padding: 0;
-    scroll-behavior: smooth;
-    scroll-padding-top: 0px !important;
-    font-family: 'Press Start 2P', cursive;
-    user-select: none;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px !important;
+  font-family: 'Press Start 2P', cursive;
+  user-select: none;
 }
 ::-webkit-scrollbar {
   width: 20px; 
@@ -223,43 +223,60 @@ nav{
     padding-left: 50px;
     font-size: 2rem;
   }
-  #ff-compose{
+  .contact-form{
     font-family: 'Press Start 2P', cursive;
   }
-  #ff-compose img{
-    display: none;
-    
-
+  .contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  .ff-submit{
-    width: 150px;
+  .contact-subheader{
+    margin-bottom: auto;
+    margin-top: 20%;
+  }
+  #submit-button{
+    width: 100%;
     height: 50px;
     background-color: transparent;
     border: 2px solid black;
     font-family: 'press start 2p', cursive;
-    font-size: 2rem;
-    
+    color: black;
+    background-color: white;
+    transition: all 0.2s;
+    cursor: pointer;
   }
-  .ff-item{
+  #submit-button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.2s;
+  }
+  .contact-form .form-row{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
-  .ff-widget-control{
-    height: 50px;
-    width: 90%;
+  .contact-form input,
+  .contact-form textarea{
+    height: 40px;
+    width: 100%;
     border: 3px solid black;
     padding: 15px;
     border-radius: 0;
+    box-sizing: border-box;
+    transition: all 0.2s;
   }
-  .ff-widget-control:focus{
+  .contact-form textarea{
+    height: 100px;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus{
     background-color: black;
     color: white;
+    transition: all 0.2s;
   }
-  .ff-submit{
-    color: black;
-    background-color: white;
-  }
+
 
   #contact-blur{
     position: absolute;
@@ -270,6 +287,29 @@ nav{
     background-color: rgba(255, 255, 255, 0.541);
   }
 
+  .divider{
+    height: 75%;
+    width: 10px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .divider-text{
+    background-color: black;
+    color: white;
+    min-width: 75px;
+    min-height: 75px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 100%;
+  }
+ 
   /* contact section */
   #contact{
     /* background-image: url('./images/projects-bg.jpg'); */
@@ -574,7 +614,7 @@ nav{
   #close-game-btn{
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1000;
@@ -853,8 +893,9 @@ nav{
 #menu-btn{
   display: none;
   align-items: center;
-      justify-content: center;  
+  justify-content: center;
 }
+
 
 @media only screen and (max-width: 600px) {
     #menu-btn{
@@ -873,6 +914,7 @@ nav{
       transition: all 0.2s;
       overflow: hidden;
       background-color: transparent;
+      z-index: 10;
     }
     .show-nav{
       height: 400px;
@@ -1018,20 +1060,15 @@ nav{
         font-size: 1.5rem;
         font-weight: bold;
     }
-    .ff-partial{
-        box-sizing: border-box;
-        margin-top: 10px !important;
+    .contact-form{
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
-    .ff-submit{
-        width: 100%;
-    }
-    #Widget182995808{
-      width: 100% !important;
-      height: 150px;
-      box-sizing: border-box;
-    }
+   
+   
     .game-body{
       width: 95%;
+      height: 95%;
     }
     #question-box,
     .choices,
