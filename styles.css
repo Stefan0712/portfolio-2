@@ -407,6 +407,25 @@ nav{
     background-position: center;
 
   }
+ 
+  .github-link{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .github-link img{
+    height: 75%;
+    z-index: 10;
+    transition: all 0.1s;
+    border-radius: 100px;
+  }
+  .github-link img:hover{
+    filter: invert(11%) sepia(73%) saturate(7206%) hue-rotate(359deg) brightness(111%) contrast(114%);
+    transition: all 0.1s;
+    transform: scale(1.1) translateY(-5px);
+  }
   .projects-container{
     width: calc(100% - 300px);
     display: flex;
